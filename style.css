@@ -103,3 +103,6 @@
 .dark:visited {
   color: white;
 }
+.dark:link {
+  color: white;
+}
