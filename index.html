@@ -4,128 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="shortcut icon"
-      href="./icons8-netflix-desktop-app-16.png"
-      type="image/x-icon"
-    />
-    <title>NetFlix Survey Form</title>
+    <link rel="shortcut icon" href="./images/gfavicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <title>Google</title>
   </head>
   <body>
-    <main id="container">
-      <header id="header">
-        <div id="title">
-          <h1>NET<span>FLIX</span></h1>
-        </div>
-        <div id="description">
-          <p>
-            Thank you for signing up at Netflix. Tell us more about yourself
-          </p>
-        </div>
+    <main class="container">
+              <nav class="nav-bar">
+          <div class="start">
+            <a href="#" class="navbar-links">About</a>
+            <a href="#" class="navbar-links">Store</a>
+          </div>
+          <div class="end">
+            <a href="#" class="navbar-links">Gmail</a>
+            <a href="#" class="navbar-links">Images</a>
+            <img
+            src="./images/icon-menu.jpg"
+            alt="icon-menu"
+            width="20px"
+            height="20px"
+            class="img"
+            />
+            <button class="sign-in btn">Sign In</button>
+          </div>
+        </nav>
       </header>
-      <section class="form-container">
-        <form action="./result.html" method="get">
-          <div class="box">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Enter your name"
-            />
+      <section class="main">
+        <div class="logo">
+          <img src="./images/googlelogo.png" alt="google-logo" />
+        </div>
+       
+          <div class="search-bar">
+            <div class="search-icon"><img src="./images/Magnifying_glass_icon.png" alt="" class="search-icons"></div>
+            <input type="text" name="searchbar" class="search-input" placeholder="Google'da arama yapın veya bir URL yazın"/>
+            <div class="mic-icon"><img src="./images/google_microphone.png" alt="" class="search-icons"></div>
           </div>
-          <div class="box">
-            <label for="age">Age</label>
-            <input type="text" name="age" id="age" placeholder="Age" />
+          <div class="buttons">
+            <input type="button" value="Google Search" class="btn"/>
+            <input type="button" value="I'm Feeling Lucky" class="btn"/>
           </div>
-          <div class="box">
-            <label for="mail">Email</label>
-            <input
-              type="email"
-              name="mail"
-              id="mail"
-              placeholder="Enter your email"
-            />
-          </div>
-          <div class="box">
-            <label for="content">Content Type</label>
-            <select name="content" id="content">
-              <option value="series" selected>Series</option>
-              <option value="movie">Movie</option>
-              <option value="anime">Anime</option>
-            </select>
-          </div>
-          <div class="box">
-            <label for="movie-type">Movie Type</label>
-            <div class="labels movie-type">
-              <input
-                type="checkbox"
-                name="movieType"
-                id="comedy"
-                value="comedy"
-              />
-              <label for="comedy">Comedy</label>
-            </div>
-            <div class="labels">
-              <input
-                type="checkbox"
-                name="movieType"
-                id="action"
-                value="action"
-              />
-              <label for="action">Action</label>
-            </div>
-            <div class="labels">
-              <input
-                type="checkbox"
-                name="movieType"
-                id="romance"
-                value="romance"
-              />
-              <label for="romance">Romance</label>
-            </div>
-          </div>
-          <div class="box">
-            <label for="gender">Gender</label>
-            <div class="labels gender">
-              <input
-                type="radio"
-                name="gender"
-                id="male"
-                value="male"
-                checked
-              />
-              <label for="male">Male</label>
-            </div>
-            <div class="labels">
-              <input type="radio" name="gender" id="female" value="female" />
-              <label for="female">Female</label>
-            </div>
-            <div class="labels">
-              <input type="radio" name="gender" id="other" value="other" />
-              <label for="other">Other</label>
-            </div>
-          </div>
-          <div class="box">
-            <label for="feedback">Feed back</label>
-            <textarea
-              name="feedback"
-              id="feedback"
-              cols="20"
-              rows="5"
-              placeholder="  Any comment"
-            ></textarea>
-          </div>
-          <button type="submit" value="Submit" id="btn">Submit</button>
-        </form>
+        <p class="description">
+          Other Languages you can use Google: <a href="#">English</a>
+        </p>
+        <button class="dark-mode btn">Change Mode</button>
       </section>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
