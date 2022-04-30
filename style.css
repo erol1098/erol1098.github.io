@@ -6,9 +6,12 @@
   font-size: 0.9rem;
   box-sizing: border-box;
 }
+.container {
+  width: 100%;
+}
 .nav-bar {
   margin: 0.5rem;
-  padding: 5px;
+  padding: 0.3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,14 +40,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 1.5rem;
+}
+.google-logo {
+  width: 20rem;
 }
 .search-bar {
   border: none;
   border-radius: 2rem;
   width: 37rem;
   height: 3rem;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  box-shadow: 0 0.063rem 0.375rem 0 rgba(32, 33, 36, 0.28);
   position: relative;
   display: flex;
   align-items: center;
@@ -78,7 +84,7 @@
   cursor: pointer;
 }
 .btn:active {
-  box-shadow: 0 1px 6px 0 #e6e6e6;
+  box-shadow: 0 0.063rem 0.375rem 0 #e6e6e6;
 }
 .search-icon {
   margin-left: 1rem;
