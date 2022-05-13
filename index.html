@@ -4,47 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./images/gfavicon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap" rel="stylesheet">
-    <title>Google</title>
+    <title>Blog Entry</title>
   </head>
   <body>
-    <main class="container">
-              <nav class="nav-bar">
-          <div class="start">
-            <a href="#" class="navbar-links">About</a>
-            <a href="#" class="navbar-links">Store</a>
-          </div>
-          <div class="end">
-            <a href="#" class="navbar-links">Gmail</a>
-            <a href="#" class="navbar-links">Images</a>
-            <a href="#"><img src="./images/icon-menu.svg" alt="" class="app-icon-menu"></a>
-            <button class="sign-in btn">Sign In</button>
-          </div>
-        </nav>
-      </header>
-      <section class="main">
-        <div class="logo">
-          <img src="./images/googlelogo.png" alt="google-logo" />
+    <header class="header">
+      <p class="header__title"></p>
+    </header>
+    <main class="main">
+      <form action="#" class="main__form">
+        <div class="main__form--name">
+          <label for="first-name">Your Name</label>
+          <input
+            type="text"
+            name="name"
+            id="first-name"
+            class="inputs"
+            placeholder="Enter Your Name"
+            required
+          />
         </div>
-       
-          <div class="search-bar">
-            <div class="search-icon"><img src="./images/Magnifying_glass_icon.png" alt="" class="search-icons"></div>
-            <input type="text" name="searchbar" class="search-input" placeholder="Google'da arama yapın veya bir URL yazın"/>
-            <div class="mic-icon"><img src="./images/google_microphone.png" alt="" class="search-icons"></div>
-          </div>
-          <div class="buttons">
-            <input type="button" value="Google Search" class="btn"/>
-            <input type="button" value="I'm Feeling Lucky" class="btn"/>
-          </div>
-        <p class="description">
-          Other Languages you can use Google: <a href="#">English</a>
-        </p>
-        <button class="dark-mode btn">Change Mode</button>
-      </section>
+        <div class="main__form--title">
+          <label for="desc">Title</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="inputs"
+            placeholder="Blog's Title"
+            required
+          />
+        </div>
+        <div class="main__form--description">
+          <label for="desc">Description</label>
+          <textarea
+            name="description"
+            id="desc"
+            class="inputs"
+            cols="30"
+            rows="10"
+            placeholder="Your Comments..."
+            required
+          ></textarea>
+        </div>
+        <div class="main__form--btn"><button class="btn">Submit</button></div>
+        <div class="main__form__warn hidden">
+          <p>Please fill all blanks❓</p>
+        </div>
+      </form>
+
+      <section class="main__blogs"></section>
     </main>
     <script src="./app.js"></script>
   </body>
