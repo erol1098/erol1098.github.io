@@ -4,64 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="style.css" />
-    <title>Blog Entry</title>
+    <title>Email Validator</title>
   </head>
   <body>
-    <header class="header">
-      <p class="header__title"></p>
-    </header>
-    <main class="main">
-      <form action="#" class="main__form">
-        <div class="main__form--name">
-          <label for="first-name">Your Name</label>
-          <input
-            type="text"
-            name="name"
-            id="first-name"
-            class="inputs"
-            placeholder="Enter Your Name"
-            required
-          />
-        </div>
-        <div class="main__form--title">
-          <label for="desc">Title</label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            class="inputs"
-            placeholder="Blog's Title"
-            required
-          />
-        </div>
-        <div class="main__form--description">
-          <label for="desc">Description</label>
-          <textarea
-            name="description"
-            id="desc"
-            class="inputs"
-            cols="30"
-            rows="10"
-            placeholder="Your Comments..."
-            required
-          ></textarea>
-        </div>
-        <div class="main__form--btn"><button class="btn">Submit</button></div>
-        <div class="main__form__warn hidden">
-          <p>Please fill all blanks❓</p>
-        </div>
-      </form>
+    <section class="main container p-3 bg-light">
+      <div class="row text-center">
+        <h1>E-Mail Validation</h1>
+      </div>
 
-      <section class="main__blogs"></section>
-    </main>
+      <div
+        class="col-8 col-sm-8 offset-2 main__entry d-flex justify-content-center flex-column gap-4 shadow my-3 p-3"
+      >
+        <div class="row text-center">
+          <label for="word" class="main__entry--label lead"
+            >Enter a email address for validating:</label
+          >
+        </div>
+        <div class="row text-center">
+          <input
+            type="text"
+            id="word"
+            class="mail col-8 col-sm-8 offset-2"
+            value="example@abc.com"
+          />
+          <p class="main__entry-warning col-sm-8 offset-2 mt-4"></p>
+        </div>
+        <div class="row d-flex justify-content-center gap-1">
+          <button class="col-4 col-sm-4 btn-enter btn btn-primary">
+            Enter
+          </button>
+        </div>
+      </div>
+    </section>
     <script src="./app.js"></script>
   </body>
 </html>

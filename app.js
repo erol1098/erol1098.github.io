@@ -1,49 +1,34 @@
 "use strict";
-//* Variables
-const userName = document.querySelector("#first-name");
-const userEntryTitle = document.querySelector("#title");
-const userEntry = document.querySelector("#desc");
-const userWarn = document.querySelector(".main__form__warn");
-const submitBtn = document.querySelector(".btn");
+const mail = document.querySelector(".mail");
+const warn = document.querySelector(".main__entry-warning");
+const btn = document.querySelector(".btn-enter");
 
-const blog = document.querySelector(".main__blogs");
-const blogName = document.querySelector(".main__blogs__entry1--name");
-const blogTitle = document.querySelector(".main__blogs__entry1__entry--title");
-const blogDescription = document.querySelector(
-  ".main__blogs__entry1__entry--description"
-);
+btn.addEventListener("click", (e) => {
+  const entry = mail.value;
+  if (entry.includes("@")) {
+    const prefix = entry.slice(0, entry.indexOf("@"));
+    const domain = entry.slice(entry.indexOf("@") + 1);
 
-let blogCounter;
-localStorage.getItem("blogCounter")
-  ? (blogCounter = localStorage.getItem("blogCounter"))
-  : (blogCounter = 1);
+    const prefixRegex = /[^a-zA-Z0-9._-]/;
+    const domainRegex = /[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
 
-document.querySelector(".main").addEventListener("click", (e) => {
-  if (e.target.classList.contains("inputs")) {
-    userWarn.classList.add("hidden");
+    prefix.search(prefixRegex) === -1 && domain.search(domainRegex) === 0
+      ? (warn.textContent = "Valid Email")
+      : (warn.textContent = "Invalid Email");
+
+    prefix.search(prefixRegex) === -1 && domain.search(domainRegex) === 0
+      ? warn.classList.add("text-bg-success")
+      : warn.classList.add("text-bg-danger");
+    console.log(prefix.search(prefixRegex));
+    console.log(domain.search(domainRegex));
+  } else {
+    warn.textContent = "Invalid Email";
+    warn.classList.add("text-bg-danger");
   }
 });
 
-submitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log(blogCounter);
-  if (userName.value && userEntryTitle.value && userEntry.value) {
-    const newEntry = document.createElement("div");
-    newEntry.innerHTML = `<div class="main__blogs__entry1--photo"><img src="./img/${blogCounter}.jpg" alt="photo">
-  <label for="main__blogs__entry1--photo" class="main__blogs__entry1--name">${userName.value}</label></div>
-  <div class="main__blogs__entry1__entry">
-    <p class="main__blogs__entry1__entry--title">${userEntryTitle.value}</p>
-    <p class="main__blogs__entry1__entry--description">${userEntry.value}</p>
-  </div>`;
-    newEntry.classList.add(`main__blogs__entry1`);
-    blog.append(newEntry);
-    blogCounter++;
-    blogCounter == 11 ? (blogCounter = 1) : blogCounter;
-    localStorage.setItem("blogCounter", blogCounter);
-    userName.value = "";
-    userEntryTitle.value = "";
-    userEntry.value = "";
-  } else {
-    userWarn.classList.remove("hidden");
-  }
+word.addEventListener("focus", (e) => {
+  warn.textContent = "";
+  warn.classList.remove("text-bg-success");
+  warn.classList.remove("text-bg-danger");
 });
