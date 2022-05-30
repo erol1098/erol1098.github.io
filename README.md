@@ -1,27 +1,45 @@
 <p>Clarusway<img align="right"
   src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-# JS-CC-004 : Email Validation
+# Project-001 : Checkout_Page (JS-01)
 
-Purpose of the this coding challenge is to write a code that given email adresses, returns the emails valid or invalid.
-
-- Valid email addresses must follow these rules:
-
-1. It must have the username@websitename.extension format type.
-1. The maximum length of the extension is 3.
+## Description
+Project aims to create a real checkout page of e-commerce website.
 
 ## Learning Outcomes
 
-At the end of the this coding challenge, students will be able to;
+At the end of the this project, students will be able to;
 
-- Analyze a problem, identify and apply programming knowledge for appropriate solution.
+- analyze a problem, create e-commerce website page.
 
-- Demonstrate their knowledge of algorithmic design principles by using JavaScript and Python effectively.
+- demonstrate their knowledge of algorithmic design principles for dynamic calculation of product's cart.
 
+   
 ## Problem Statement
 
-- Write a function that takes email variable and return `true` or `false` and write console `invalid` or `valid`.
+- You can use [Checkout_Page](https://github.com/clarusway/clarusway-full-stack-11-22/tree/main/html-css/projects/004-checkout-form) template for project.
 
-- Please note that, extension length can be 2 or 3 letters( For example: `.co`, `com`. )
+- Create a checkout page following the design and make the calculation of cart dynamically with using of DOM and Event in JS.
+
+![Form](checkout_app.gif)
+
+
+-  User story;
+
+   - When I click plus button on product's row, I can increase the product's quantity.
+   - When I click minus button on product's row, I can decrease the product's quantity, but minimum quantity value can be 1.
+   - When I click remove button on product's row or I decrease the quantity to 0, after confirmation I can delete a product in the cart.
+   - When I change any combination of product chart(plus, minus, remove etc.), I want to see the new calculation of chart's prices in concerned fields.
+
+
+## Resources
+
+- [Images](./IMG/)
+
+- [Fonts](./FONTS/)
+
+- 🔥 You don’t need to create a new html template in this project, you can use [Checkout_Page](https://github.com/clarusway/clarusway-full-stack-10-21/tree/main/javascript/Projects/005-Checkout_Page/) template. We will be concerned in javascript side.
+ 
+
 
 <center> ⌛ Happy Coding  ✍ </center>
