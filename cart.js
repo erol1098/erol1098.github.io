@@ -177,6 +177,7 @@ cart.addEventListener("click", (e) => {
         } else {
           removeCart(p, productTotalPrice);
           deleteItem(productLS);
+          emptyControl();
         }
       } else if (e.target === p.querySelector(".product-increment")) {
         addItem(productAmount, productTotalPrice, productPrice);
