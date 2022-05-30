@@ -10,6 +10,12 @@ const total = document.querySelector(".total-price");
 
 const emptyCart = document.querySelector(".empty");
 
+const emptyControl = function () {
+  Object.keys(localStorage).length > 1
+    ? emptyCart.classList.add("d-none")
+    : emptyCart.classList.remove("d-none");
+};
+
 const addTotalInıt = function (productTotalPrice) {
   subtotal.textContent = (+subtotal.textContent + +productTotalPrice).toFixed(
     2
@@ -85,6 +91,7 @@ allProduct.forEach((key) => {
 `;
   cart.append(newDiv);
   addTotalInıt(arr[5]);
+  emptyControl();
 });
 
 const addItem = function (productAmount, productTotalPrice, productPrice) {
@@ -176,8 +183,8 @@ cart.addEventListener("click", (e) => {
         addShipping();
       } else if (e.target === p.querySelector(".product-remove")) {
         removeCart(p, productTotalPrice);
-
         deleteItem(productLS);
+        emptyControl();
       }
     }
   }
